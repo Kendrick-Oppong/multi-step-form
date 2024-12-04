@@ -9,4 +9,5 @@ import { SideNavComponent } from "./side-nav/side-nav.component";
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css',
 })
+  
 export class LayoutComponent {}
