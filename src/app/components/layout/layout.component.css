@@ -1,0 +1,11 @@
+main {
+  background-color: var(--white);
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  gap: 3rem;
+  min-width: 94rem;
+  border-radius: 1rem;
+  min-height: 60rem;
+  box-shadow: #64646f33 0 0.7rem 2.9rem;
+}
