@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+import { navSteps } from '@constants/form-config.constants';
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.css',
 })
   
+
 export class SideNavComponent {
-  readonly steps = [
-    { index: 1, step: 'Step 1', title: 'YOUR INFO' },
-    { index: 2, step: 'Step 2', title: 'SELECT PLAN' },
-    { index: 3, step: 'Step 3', title: 'ADD-ONS' },
-    { index: 4, step: 'Step 4', title: 'SUMMARY' },
-  ];
+  readonly steps = navSteps;
+
+  constructor(private router: Router) {}
+
+  isRouteActive(path: string) {
+    return this.router.url.includes(path);
+  }
 }
