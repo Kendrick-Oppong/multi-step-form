@@ -1,1 +1,13 @@
-<button>Next Step</button>
+<div>
+  @if (previousRoute) {
+  <button class="prev-button" (click)="goBack()">Go Back</button>
+  }
+  <button
+    class="next-button"
+    type="submit"
+    (click)="nextRoute !== '/step2' ? nextStep() : ''"
+    [ngStyle]="{ 'margin-left': !previousRoute ? 'auto' : '0px' }"
+  >
+    Next Step
+  </button>
+</div>
