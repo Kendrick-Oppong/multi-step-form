@@ -1,6 +1,5 @@
 aside {
   background-image: url("../../../../assets/images/bg-sidebar-desktop.svg");
-  min-width: 27.5rem;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
@@ -34,8 +33,17 @@ aside {
   font-size: 1.2rem;
 }
 
-
 .step-number-title h2 {
   color: var(--white);
   font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active-step {
+  background-color: var(--sky-blue);
+  transition: background-color 0.2s ease-in;
+  color: var(--denim);
 }
