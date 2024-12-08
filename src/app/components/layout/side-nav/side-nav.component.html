@@ -1,0 +1,11 @@
+<aside>
+  @for (step of steps; track $index) {
+  <div class="step-container">
+    <div class="step-index">{{ step.index }}</div>
+    <div class="step-number-title">
+      <p>{{ step.step }}</p>
+      <h2>{{ step.title }}</h2>
+    </div>
+  </div>
+  }
+</aside>
