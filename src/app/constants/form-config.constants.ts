@@ -49,3 +49,25 @@ export const step2Config = [
     yearly: '$150/yr',
   },
 ];
+
+
+export const step3Config = [
+  {
+    id: 1,
+    title: 'Online service',
+    description: 'Access to multiplayer games',
+    price: '$10/yr',
+  },
+  {
+    id: 2,
+    title: 'Larger storage',
+    description: 'Extra 1TB of cloud save',
+    price: '$20/yr',
+  },
+  {
+    id: 3,
+    title: 'Customizable profile',
+    description: 'Custom theme on your profile',
+    price: '$20/yr',
+  },
+];
