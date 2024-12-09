@@ -1,5 +1,5 @@
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: var(--denim);
 }
@@ -7,7 +7,6 @@ h1 {
 h2 {
   color: var(--denim);
   font-size: 1.6rem;
-  margin-block: 3.9rem 0.7rem;
 }
 
 p {
@@ -18,22 +17,29 @@ p {
 }
 
 .plans-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
-  margin-block: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .plan-container {
   border: 1px solid var(--border-color);
-  padding: 1.6rem;
+  padding: 0.5rem;
   border-radius: 0.8rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .plan-container.selected {
   border: 2px solid var(--purple);
 }
+
+/* .plans {
+  display: flex;
+  gap: 1.2rem;
+} */
 
 .plan-container p {
   font-size: 1.4rem;
@@ -108,4 +114,27 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(25px);
+}
+
+@media screen and (min-width: 768px) {
+  .plans-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    margin-block: 3.2rem;
+    display: block;
+ 
+  }
+
+   h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    margin-block: 3.9rem 0.7rem;
+  }
+
+  .plan-container {
+   padding: 1.8rem;
+  }
 }

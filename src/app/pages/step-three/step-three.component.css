@@ -1,5 +1,5 @@
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: var(--denim);
 }
@@ -70,4 +70,10 @@ input[type="checkbox"] {
 .addon-price {
   color: var(--purple);
   font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
 }
