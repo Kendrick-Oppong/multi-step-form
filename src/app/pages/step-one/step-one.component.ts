@@ -11,10 +11,10 @@ import { FormStorageService } from '@services/form-storage.service';
   selector: 'app-step-1',
   standalone: true,
   imports: [ButtonComponent, ReactiveFormsModule],
-  templateUrl: './step-1.component.html',
-  styleUrl: './step-1.component.css',
+  templateUrl: './step-one.component.html',
+  styleUrl: './step-one.component.css',
 })
-export class Step1Component implements OnInit {
+export class StepOneComponent implements OnInit {
   readonly forms = step1Config;
 
   constructor(

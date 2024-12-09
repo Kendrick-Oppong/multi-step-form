@@ -25,3 +25,27 @@ export const step1Config = [
     placeholder: 'e.g. +1 234 567 890',
   },
 ];
+
+export const step2Config = [
+  {
+    id: 1,
+    image: '../../assets/images/icon-arcade.svg',
+    plan: 'Arcade',
+    monthly: '$9/mo',
+    yearly: '$90/yr',
+  },
+  {
+    id: 2,
+    image: '../../assets/images/icon-advanced.svg',
+    plan: 'Advanced',
+    monthly: '$12/mo',
+    yearly: '$120/yr',
+  },
+  {
+    id: 3,
+    image: '../../assets/images/icon-pro.svg',
+    plan: 'Pro',
+    monthly: '$15/mo',
+    yearly: '$150/yr',
+  },
+];
