@@ -2,18 +2,16 @@ main {
   padding-top: 2rem;
   background-color: var(--white);
   padding-block: 1.6rem;
-  padding-inline:  1.6rem 5rem;
-  display: grid;
-  grid-template-columns: 30rem 1fr;
+  padding-inline: 1.6rem 5rem;
+  display: block;
   gap: 5rem;
-  max-width: 85%;
+  max-width: 90%;
   margin-inline: auto;
   max-height: 100dvh;
   border-radius: 1rem;
-  min-height: 60rem;
+  min-height: 70rem;
   box-shadow: #64646f33 0 0.7rem 2.9rem;
 }
-
 
 @media screen and (min-width: 1280px) {
   main {
@@ -21,9 +19,16 @@ main {
   }
 }
 
-
 @media screen and (min-width: 1024px) {
   main {
     max-width: 65%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+      min-height: 60rem;
   }
 }
