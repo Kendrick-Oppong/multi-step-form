@@ -5,7 +5,7 @@
   <button
     class="next-button"
     type="submit"
-    (click)="nextRoute !== '/step2' ? nextStep() : ''"
+    (click)="nextRoute !== '/sign-up/step2' ? nextStep() : ''"
     [ngStyle]="{
       'margin-left': !previousRoute ? 'auto' : '0px',
       'background-color': nextRoute === null ? 'var(--purple)' : ''
