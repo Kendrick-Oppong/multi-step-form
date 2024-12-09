@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StepRouterService } from '@services/step-router.service';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class ButtonComponent {
   previousRoute: string | null = null;
   nextRoute: string | null = null;
+  @Output() confirmClicked = new EventEmitter<boolean>();
 
   constructor(
     private router: Router,
@@ -34,6 +35,8 @@ export class ButtonComponent {
   nextStep() {
     if (this.nextRoute) {
       this.router.navigate([this.nextRoute]);
+    } else {
+      this.confirmClicked.emit(true); 
     }
   }
 }
