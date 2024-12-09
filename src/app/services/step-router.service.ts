@@ -6,14 +6,16 @@ import { ActivatedRouteSnapshot } from '@angular/router';
 })
 export class StepRouterService {
   private steps = [
-    { path: 'step1', index: 1 },
-    { path: 'step2', index: 2 },
-    { path: 'step3', index: 3 },
-    { path: 'step4', index: 4 },
+    { path: 'sign-up/step1', index: 1 },
+    { path: 'sign-up/step2', index: 2 },
+    { path: 'sign-up/step3', index: 3 },
+    { path: 'sign-up/step4', index: 4 },
   ];
 
   private getCurrentStepIndex(routeSnapshot: ActivatedRouteSnapshot): number {
-    const currentPath = routeSnapshot.url[0]?.path;
+    const currentPath = routeSnapshot.pathFromRoot
+      .flatMap((snapshot) => snapshot.url.map((segment) => segment.path))
+      .join('/');
     return this.steps.findIndex((step) => step.path === currentPath);
   }
 
