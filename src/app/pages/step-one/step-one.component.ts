@@ -49,7 +49,7 @@ export class StepOneComponent implements OnInit {
       this.personalInfoForm.markAllAsTouched();
     } else {
       this.formStorageService.setItem(STORAGE_KEY.STEP1, step1Data);
-      this.router.navigate(['/step2']);
+      this.router.navigate(['sign-up/step2']);
     }
   }
 }

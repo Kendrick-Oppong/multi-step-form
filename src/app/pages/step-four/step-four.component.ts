@@ -60,17 +60,18 @@ export class StepFourComponent {
       return total + price;
     }, 0);
 
-    return `$${(planPrice + addonCost).toFixed(2)}${
-      this.isYearly ? '/yr' : '/mo'
-    }`;
+    return `$${planPrice + addonCost}${this.isYearly ? '/yr' : '/mo'}`;
   }
 
   changePlan(): void {
-    this.router.navigate(['/step2']);
+    this.router.navigate(['sign-up/step2']);
   }
 
   onConfirmClicked(showThankYou: boolean): void {
     this.showThankYou = showThankYou;
     this.formStorageService.clearStorage();
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 2000);
   }
 }
