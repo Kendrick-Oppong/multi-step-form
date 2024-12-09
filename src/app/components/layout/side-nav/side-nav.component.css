@@ -1,17 +1,27 @@
 aside {
-  background-image: url("../../../../assets/images/bg-sidebar-desktop.svg");
+  background-image: url("../../../../assets/images/bg-sidebar-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
   padding: 4rem;
   justify-content: start;
-  height: 100%;
+  height: 16rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .step-container {
   display: flex;
   align-items: center;
-  margin-top: 3.2rem;
+  margin-top: 0;
   gap: 1.6rem;
 }
 
@@ -26,6 +36,14 @@ aside {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--white);
+}
+
+.step-index p {
+  color: var(--white);
+}
+
+.step-number-title {
+  display: none;
 }
 
 .step-number-title p {
@@ -46,4 +64,31 @@ a {
   background-color: var(--sky-blue);
   transition: background-color 0.2s ease-in;
   color: var(--denim);
+}
+
+.active-step p {
+  color: var(--purple);
+}
+
+@media screen and (min-width: 768px) {
+  aside {
+    display: block;
+    background-image: url("../../../../assets/images/bg-sidebar-desktop.svg");
+    gap: 1.6rem;
+    height: 100%;
+    justify-content: stretch;
+    position: static;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+  }
+
+  .step-container {
+    margin-top: 3.2rem;
+  }
+
+  .step-number-title {
+    display: inline-flex;
+  }
 }
