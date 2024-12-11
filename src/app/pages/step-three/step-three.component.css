@@ -38,6 +38,7 @@ p {
 input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
+  accent-color: var(--purple);
 }
 
 .addon-item.selected {
