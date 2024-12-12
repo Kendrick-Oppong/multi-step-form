@@ -33,7 +33,7 @@ export class StepTwoComponent implements OnInit {
 
   saveToLocalStorage(): void {
     this.formStorageService.setItem(STORAGE_KEY.STEP2, {
-      planId: this.selectedPlanId,
+      planId: this.selectedPlanId ,
       isYearly: this.isYearly,
     });
   }

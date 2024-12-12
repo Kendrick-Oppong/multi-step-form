@@ -34,9 +34,9 @@ export class StepFourComponent {
 
     if (step2Data) {
       this.isYearly = step2Data.isYearly;
-      this.selectedPlan = step2Config.find(
-        (plan) => plan.id === step2Data.planId
-      );
+      this.selectedPlan = step2Config[step2Data.planId - 1];
+    } else {
+      this.selectedPlan = step2Config[0];
     }
 
     if (step3Data) {
@@ -49,7 +49,13 @@ export class StepFourComponent {
   }
 
   getTotalCost(): string {
-    if (!this.selectedPlan) return '$0';
+  
+    if (
+      !this.selectedPlan ||
+      (!this.selectedPlan.yearly && !this.selectedPlan.monthly)
+    ) {
+      return '$0';
+    }
 
     const planPrice = this.isYearly
       ? parseFloat(this.selectedPlan.yearly.replace('$', ''))
